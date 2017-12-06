@@ -29,10 +29,9 @@
         }
 
         $landing-nav-logo-height: 30px;
-        $landing-nav-logo-ratio: 1.1414;
         .landing-nav-logo {
             height: $landing-nav-logo-height;
-            width: $landing-nav-logo-height*$landing-nav-logo-ratio;
+            width: $landing-nav-logo-height*$logo-ratio;
         }
 
     .landing-nav-content {
