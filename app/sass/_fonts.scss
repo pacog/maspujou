@@ -1,0 +1,10 @@
+@mixin serif () {
+    font-family: 'Lora', serif;
+}
+@mixin sans () {
+    font-family: 'Istok Web', sans-serif;
+}
+
+html, body {
+    @include serif;
+}

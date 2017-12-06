@@ -1,0 +1,12 @@
+.hero {
+    min-height: 70vh;
+    background-color: #313411;
+    background-image: url('assets/bg-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+}
