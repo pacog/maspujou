@@ -25,3 +25,10 @@
             }
         }
     }
+    .section-sub-title {
+        font-size: 20px;
+        line-height: 20px + $g-s;
+        margin-bottom: $g-m;
+        margin-top: $g-ml;
+        color: $soft-grey;
+    }

@@ -1,0 +1,20 @@
+.footer {
+    margin-top: $g-l;
+    background-color: $soft-grey;
+    text-align: center;
+    color: $dark-grey;
+    padding: $g-m;
+    font-size: 10px;
+    line-height: 16px;
+
+    div {
+        margin-bottom: $g-s;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: $dark-grey;
+    }
+}

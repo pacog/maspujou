@@ -10,3 +10,22 @@
     @include align-items(center);
     @include justify-content(center);
 }
+
+    .hero-content {
+        // border: 3px solid white;
+        border-radius: $g-ml;
+        background: rgba($dark-grey, 0.45);
+        color: white;
+        padding: $g-l 2*$g-l;
+        text-align: center;
+    }
+        .hero-title {
+            font-size: 2*$g-l;
+            line-height: 2*$g-l + $g-s;
+            @include sans;
+        }
+
+        .hero-sub-title {
+            font-size: $g-ml;
+            line-height: $g-ml + $g-s;
+        }
