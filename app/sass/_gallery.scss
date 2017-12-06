@@ -1,0 +1,27 @@
+$gallery-image-size: 250px;
+
+@mixin inline-border($color, $size) {
+    -moz-box-shadow:    inset $size $size 0 $color, inset (-$size) (-$size) 0 $color;
+    -webkit-box-shadow: inset $size $size 0 $color, inset (-$size) (-$size) 0 $color;
+    box-shadow:         inset $size $size 0 $color, inset (-$size) (-$size) 0 $color;
+}
+
+.gallery {
+    @include flexbox;
+    @include flex-wrap(wrap);
+
+    a {
+        display: block;
+        width: $gallery-image-size;
+        height: $gallery-image-size;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-right: $g-s;
+        margin-bottom: $g-s;
+
+        &:hover {
+            @include inline-border( rgba(white, 0.5), $g-sm);
+        }
+    }
+}

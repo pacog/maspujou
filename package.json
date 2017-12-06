@@ -23,5 +23,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-server-livereload": "^1.9.2",
     "gulp-sync": "^0.1.4"
+  },
+  "dependencies": {
+    "baguettebox.js": "^1.9.1"
   }
 }
