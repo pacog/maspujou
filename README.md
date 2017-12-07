@@ -22,5 +22,5 @@ To start a local server and watch the files so it autobuilds.
 ## Deploy to gh-pages
 
 ```bash
-npm run deploy
+gulp deploy
 ```

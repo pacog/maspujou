@@ -3,7 +3,8 @@ const server = require('gulp-server-livereload');
 const sass = require('gulp-sass');
 const gulpsync = require('gulp-sync')(gulp);
 const inlinesource = require('gulp-inline-source');
-const ghPages = require('gulp-gh-pages');
+// const ghPages = require('gulp-gh-pages');
+const run = require('gulp-run');
 
 gulp.task('webserver', function() {
     gulp.src('dist')
@@ -39,11 +40,16 @@ gulp.task('inject', function() {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('deploy', gulpsync.sync(['sass', 'copyAssets', 'inject', 'gh-pages-upload']));
 
-gulp.task('gh-pages-upload', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+
+// use gulp-run to start a pipeline
+gulp.task('npm-gh-pages', function() {
+  return run('npm run deploy').exec();
 });
+// gulp.task('gh-pages-upload', function() {
+//   return gulp.src('./dist/**/*')
+//     .pipe(ghPages());
+// });
 
+gulp.task('deploy', gulpsync.sync(['sass', 'copyAssets', 'inject', 'npm-gh-pages']));
 gulp.task('default', gulpsync.sync(['sass', 'copyAssets', 'inject', 'webserver', 'watch']));
