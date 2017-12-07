@@ -52,3 +52,52 @@
                 }
             }
         }
+
+.landing-nav-mobile-button {
+    display: none;
+    margin-left: auto;
+    cursor: pointer;
+    background-image: url('assets/hamburguer.svg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 28px;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+.landing-nav-mobile-button-checkbox {
+    display: none;
+}
+
+.landing-nav-mobile-button-checkbox:checked ~ .landing-nav-content {
+    display: block;
+}
+
+@media screen and (max-width : 760px){
+    .landing-nav-content {
+        display: none;
+        position: absolute;
+        top: $header-height;
+        right: 0;
+        background: white;
+        .landing-nav-item {
+            margin: 0;
+            a {
+                text-decoration: none;
+                display: block;
+                padding: $g-m $g-ml;
+            }
+            &:hover {
+                background-color: lighten($soft-grey, 20);
+                a {
+                    color: $dark-grey;
+                }
+            }
+        }
+    }
+    .landing-nav-mobile-button {
+        display:block;
+    }
+}
