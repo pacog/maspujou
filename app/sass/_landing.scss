@@ -32,3 +32,26 @@
         margin-top: $g-ml;
         color: $soft-grey;
     }
+
+@media screen and (max-width : 820px) {
+    .section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: $g-l;
+        padding-right: $g-l;
+    }
+}
+
+.landing-map {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.landing-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}

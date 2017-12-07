@@ -28,4 +28,22 @@
         .hero-sub-title {
             font-size: $g-ml;
             line-height: $g-ml + $g-s;
+            color: lighten($soft-grey, 20);
         }
+
+@media screen and (max-width : 600px) {
+    .hero-content {
+        padding: $g-m $g-l;
+        width: 100%;
+        border-radius: 0;
+    }
+    .hero-title {
+        font-size: 36px;
+        line-height: 36px + $g-s;
+    }
+    .hero-sub-title {
+        font-size: 16px;
+        line-height: 16px + $g-s;
+        color: lighten($soft-grey, 20);
+    }
+}

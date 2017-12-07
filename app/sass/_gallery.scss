@@ -25,3 +25,14 @@ $gallery-image-size: 250px;
         }
     }
 }
+
+@media screen and (max-width : 600px) {
+    .gallery {
+        a {
+            width: 100%;
+            height: auto;
+            padding-top: 100%;
+            margin: 0;
+        }
+    }
+}
